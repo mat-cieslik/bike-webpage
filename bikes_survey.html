@@ -24,17 +24,31 @@
         </section>
         <section class="content">
             <legend><h2>Wypełnij krótką ankietę!</h2></legend>             
-            <form action="mailto:mat.cieslik98@gmail.com" method="post" enctype="text/plain">
-                <label for="fname">Imię i nazwisko:</label>
-                <input type="text" name="name" size="28" placeholder="Wpisz swoje imię i nazwisko"><br><br>
+            <form action="process_form.html" method="post">
+                <label for="email">Adres e-mail:</label>
+                <input type="email" id="email" name="email" placeholder="Wpisz swój e-mail"><br><br>
+                <label for="fname">Imię:</label>
+                <input type="text" id="fname" name="name" placeholder="Wpisz swoje imię"><br><br>
+                <label for="fname">Nazwisko:</label>
+                <input type="text" id="fname" name="secondname" placeholder="Wpisz swoje nazwisko"><br><br>
+                <label for="age">Wiek:</label>
+                <input type="number" id="age" name="age" placeholder="Wpisz swój wiek"><br><br>
                 <div class="gender-container">
                     <label>Płeć:</label>
-                    <input type="radio" name="gender" value="male">
-                    <label>Mężczyzna</label>
-                    <input type="radio" name="gender" value="female">
-                    <label>Kobieta</label>
-                </div>        
-                <label for="fav">Który rower jest najciekawszy?</label>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Mężczyzna</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Kobieta</label>
+                </div><br>
+                <div class="gender-container">
+                    <label>Czy masz rower:</label>
+                    <input type="radio" id="yes" name="gender" value="male">
+                    <label for="yes">Tak</label>
+                    <input type="radio" id="no" name="gender" value="female">
+                    <label for="no">Nie</label>
+                </div><br>
+                <h3>Który rower Ci się najbardziej podoba?</h3>
+                <label for="fav">Wybierz swój ulubiony rower:</label>
                 <select id="fav" name="favorite_bike">
                     <optgroup label="Rowery">
                         <option value="Bicykl">Bicykl</option>
@@ -43,14 +57,13 @@
                         <option value="Trek 8500 (Aluminium)">Trek 8500 (Aluminium)</option>
                         <option value="Specialized Turbo Levo (elektryczny)">Specialized Turbo Levo (elektryczny)</option>
                     </optgroup>
-                </select>
-                <br><br>
+                </select><br><br>
                 <div class="submit-container">
                     <input type="submit" value="Wyślij">
+                    <input type="reset" value="Wyczyść">
                 </div>
             </form>
         </section>
-        
     </main>
     <footer>
         <div class="social-icons">
